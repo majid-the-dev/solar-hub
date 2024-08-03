@@ -5,13 +5,13 @@ import { BsDashLg } from "react-icons/bs";
 
 const Products = () => {
   return (
-    <div className="mx-auto w-full max-w-7xl pt-10 pb-28 px-5">
+    <div className="mx-auto w-full max-w-7xl md:pt-10 pb-28 px-5">
       <div className="flex items-center justify-center gap-1 text-darkGreen mx-auto">
         <BsDashLg className="text-lg" />
         <p className="text-xs md:text-sm font-light">What we sell</p>
       </div>
       <h1 className="text-2xl md:text-4xl text-center font-bold mt-3">Our product range</h1>
-      <p className="text-xs md:text-sm text-center font-light leading-5 mt-8 mx-auto max-w-3xl">
+      <p className="text-xs md:text-sm text-center font-light leading-5 mt-6 mx-auto max-w-3xl">
         Discover our wide range of top-quality solar products designed to meet
         all your energy needs. From residential to commercial applications, we
         sell products engineered to deliver exceptional performance and lasting

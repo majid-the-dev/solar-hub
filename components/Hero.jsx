@@ -8,7 +8,7 @@ import Image from "next/image";
 const Hero = () => {
   return (
     <div className="relative h-[90vh] w-full bg-darkGreen flex flex-col items-center justify-center overflow-x-hidden">
-      <div class="custom-shape-divider-bottom-1722112102 z-[50]">
+      {/* <div class="custom-shape-divider-bottom-1722112102 z-[50]">
         <svg
           data-name="Layer 1"
           xmlns="http://www.w3.org/2000/svg"
@@ -20,7 +20,7 @@ const Hero = () => {
             class="shape-fill"
           ></path>
         </svg>
-      </div>
+      </div> */}
       <Image src={"/assets/hero-bg.jpg"} layout="fill" objectFit="cover" />
       <div class="absolute inset-0 bg-gradient-to-t from-black/80 to-darkGreen"></div>
       <h1 className="text-white text-3xl md:text-5xl text-center font-bold uppercase md:leading-[60px] z-50 px-5 md:px-0">
@@ -35,9 +35,9 @@ const Hero = () => {
       <div className="inline-flex items-center gap-4 z-50 mt-8">
         <Link
           target="_blank" href={"https://wa.me/+2347071793075/"}
-          className="bg-white flex items-center gap-2 text-darkGreen text-[15px] font-semibold rounded-full px-8 py-4"
+          className="bg-white flex items-center gap-2 text-darkGreen text-sm md:text-[15px] font-semibold rounded-full px-8 py-4"
         >
-          Contact Sales Today
+          Get Quote Today
         </Link>
       </div>
     </div>

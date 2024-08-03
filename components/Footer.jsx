@@ -15,8 +15,9 @@ const Footer = () => {
           <Image
             src={"/assets/dark--logo.png"}
             alt="logo"
-            height={150}
-            width={150}
+            height={110}
+            width={110}
+            className=""
           />
           <p className="text-xs font-normal leading-6 max-w-lg mt-8">
             Discover the future of energy with Solar Hub. We deliver top-notch

@@ -34,7 +34,7 @@ const MobileSidebar = ({ categories }) => {
       {sidebar && (
         <div
           onClick={closeSidebar}
-          className="bg-darkGreen/90 fixed inset-0 z-[99999]"
+          className="bg-dark/90 fixed inset-0 z-[99999]"
         >
           <div
             onClick={(e) => e.stopPropagation()}

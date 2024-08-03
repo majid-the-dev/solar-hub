@@ -17,10 +17,10 @@ const GetQoute = () => {
             <h1 className="text-white text-[32px] font-bold leading-[44px]">
               Start your journey <br /> to clean energy savings today
             </h1>
-            <span className="w-full lg:hidden flex items-center justify-center text-white text-center text-4xl mt-5">
+            {/* <span className="w-full lg:hidden flex items-center justify-center text-white text-center text-4xl mt-5">
               <BsDashLg />
-            </span>
-            <p className="text-white text-sm font-light leading-6 -mt-1 lg:mt-5 max-w-xl">
+            </span> */}
+            <p className="text-white text-sm leading-6 mt-5 max-w-xl">
               Take the first step towards a sustainable and cost-effective
               energy solution with Solar Hub. Whether you're looking to power
               your home, business, or community, our experts are here to guide

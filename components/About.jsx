@@ -14,7 +14,7 @@ const About = () => {
       <h1 className="text-3xl md:text-4xl text-center font-bold mt-3">
         We illuminate your world
       </h1>
-      <p className="text-xs md:text-sm text-center font-light leading-5 mt-8 mx-auto max-w-3xl">
+      <p className="text-xs md:text-sm text-center font-light leading-5 mt-6 mx-auto max-w-3xl">
         Discover the future of energy with Solar Hub. We deliver top-notch solar
         power solutions that ensure an uninterrupted, cost-effective, and
         eco-friendly power supply. From solar panels to batteries, generators,
@@ -30,8 +30,8 @@ const About = () => {
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
           <div className="absolute bottom-7 left-6 right-7">
-            <h1 className="text-white text-2xl font-semibold">Sales</h1>
-            <p className="text-gray-300 text-sm font-light leading-[18px] mt-1">
+            <h1 className="text-white text-lg md:text-2xl font-semibold">Sales</h1>
+            <p className="text-gray-300 text-[13px] md:text-sm font-light leading-[18px] mt-1">
               We offer a wide range of solar products to meet your unique energy
               needs
             </p>
@@ -53,8 +53,8 @@ const About = () => {
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
           <div className="absolute bottom-7 left-6 right-7">
-            <h1 className="text-white text-2xl font-semibold">Installation</h1>
-            <p className="text-gray-300 text-sm font-light leading-[18px] mt-1">
+            <h1 className="text-white text-lg md:text-2xl font-semibold">Installation</h1>
+            <p className="text-gray-300 text-[13px] md:text-sm font-light leading-[18px] mt-1">
               Our team of certified professionals ensures a seamless
               installation process
             </p>
@@ -76,8 +76,8 @@ const About = () => {
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
           <div className="absolute bottom-7 left-6 right-7">
-            <h1 className="text-white text-2xl font-semibold">Maintenance</h1>
-            <p className="text-gray-300 text-sm font-light leading-[18px] mt-1">
+            <h1 className="text-white text-lg md:text-2xl font-semibold">Maintenance</h1>
+            <p className="text-gray-300 text-[13px] md:text-sm font-light leading-[18px] mt-1">
               Keep your solar running with our comprehensive maintenance
               services.
             </p>
