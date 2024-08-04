@@ -86,7 +86,7 @@ const Sidebar = () => {
           </span>
           Customers
         </Link>
-        <Link
+        {/* <Link
           href={"/admin/coupons"}
           className={`hover:bg-gray-200 flex items-center gap-2 text-[13px] font-normal rounded-lg px-2 py-3 ${
             path.includes("/admin/coupons") ? "bg-gray-200" : ""
@@ -96,7 +96,7 @@ const Sidebar = () => {
             <CiMoneyBill />
           </span>
           Coupons
-        </Link>
+        </Link> */}
         <Link
           href={"/admin/admins"}
           className={`hover:bg-gray-200 flex items-center gap-2 text-[13px] font-normal rounded-lg px-2 py-3 ${

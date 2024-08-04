@@ -8,6 +8,8 @@ import { formatPrice } from "@/lib/utils";
 import { AiFillShop, AiTwotoneInfoCircle } from "react-icons/ai";
 import { IoBagCheckOutline } from "react-icons/io5";
 import { BsInfoCircle } from "react-icons/bs";
+import { FaMinus, FaPlus } from "react-icons/fa";
+import { FiTrash2 } from "react-icons/fi";
 
 const Page = () => {
   const { cartProducts, removeCartProduct, clearCart } =
@@ -54,20 +56,13 @@ const Page = () => {
       {cartProducts.length === 0 && (
         <div className="px-16 h-[75vh]">
           <div className="h-full flex flex-col items-center justify-center">
-            {/* <BiSolidSad className="text-default text-4xl" /> */}
-            {/* <Image
-              src={"/assets/shopping-bag.png"}
-              height={60}
-              width={60}
-              alt="icon"
-            /> */}
             <AiTwotoneInfoCircle className="text-3xl" />
             <p className="text-[17px] md:text-xl text-center font-semibold mt-5">
               Ooops! Cart is Empty
             </p>
             <p className="text-xs text-gray-500 text-center font-light leading-4 mt-2">
               Before proceeding to checkout, you must add some products to your
-              shopping bag!
+              shopping cart!
             </p>
           </div>
         </div>
@@ -76,20 +71,20 @@ const Page = () => {
         <div className="mx-auto w-full max-w-7xl relative px-5 pt-20 pb-24">
           <h1 className="text-2xl font-medium">Shopping Cart</h1>
           <div className="mt-12">
-            {/* {anyOutOfStock && ( */}
+            {anyOutOfStock && (
               <p className="inline-flex items-center gap-2 bg-red-100 text-red-600 text-xs font-medium px-4 py-2">
                 <BsInfoCircle />
                 Some products in your cart are out of stock
               </p>
-            {/* )} */}
-            <div className="grid grid-cols-5 gap-6 mt-5">
+            )}
+            <div className="grid grid-cols-5 gap-10 mt-5">
               <div className="col-span-5 lg:col-span-3">
-                <div className="border shadow border-gray-300/70 p-6">
+                <div className="">
                   <div className="flex flex-col">
                     {cartProducts.map((product, index) => (
                       <div
                         key={product._id}
-                        className={`flex flex-col md:flex-row justify-between gap-7 py-10 ${
+                        className={`flex flex-col md:flex-row justify-between gap-8 py-10 ${
                           index !== cartProducts.length - 1
                             ? "border-b border-gray-300/60"
                             : ""
@@ -123,13 +118,33 @@ const Page = () => {
                               </div>
                             ) : (
                               <p className="text-red-600 text-sm">
-                                &#8358; {formatPrice(product.discount)}
+                                &#8358; {formatPrice(product.price)}
                               </p>
                             )}
-                            {product.availability === "Out of Stock" && (
+                            <div className="inline-flex items-center gap-4">
+                              <button
+                                onClick={() => reduceQuantity(product._id)}
+                                className="animation text-xs text-gray-400 hover:text-black"
+                              >
+                                <FaMinus />
+                              </button>
+                              <span className="text-xs bg-gray-100 px-3 py-2">
+                                {quantities[product._id]}
+                              </span>
+                              <button
+                                onClick={() => increaseQuantity(product._id)}
+                                className="animation text-xs text-gray-400 hover:text-black"
+                              >
+                                <FaPlus />
+                              </button>
+                            </div>
+                            <button onClick={() => removeCartProduct(index)} className="inline-flex items-center gap-2 text-red-600 text-xs mt-4">
+                              <FiTrash2 />
+                              Remove
+                            </button>
+                            {product.availability !== "Available" && (
                               <div className="inline-block">
-                                <p className="inline-flex items-center gap-2 bg-red-100 text-red-600 text-xs font-medium rounded-lg px-3 py-1.5">
-                                  <BsInfoCircle className="text-[12px]" />
+                                <p className="inline bg-red-100 text-red-600 text-xs font-medium px-3 py-1.5 mt-2">
                                   Out of stock
                                 </p>
                               </div>
@@ -142,7 +157,7 @@ const Page = () => {
                 </div>
               </div>
               <div className="col-span-5 lg:col-span-2">
-                <div className="border border-gray-300/60 shadow p-6">
+                <div className="bg-gray-50 border border-gray-200/80 shadow p-5">
                   <h1 className="text-sm font-medium">Payment Summary</h1>
                   <div className="flex flex-col gap-5 mt-7">
                     <div className="flex items-center justify-between">
@@ -175,13 +190,13 @@ const Page = () => {
                     </Link>
                   </div>
                 </div>
-                <Link
+                {/* <Link
                   href={"/"}
                   className="animation inline-flex items-center float-end gap-2 text-red-600 text-xs font-semibold mt-5"
                 >
                   <AiFillShop />
                   Return to shop
-                </Link>
+                </Link> */}
               </div>
             </div>
           </div>

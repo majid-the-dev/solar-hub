@@ -114,7 +114,7 @@ const MobileSidebar = () => {
                 Customers
               </SheetClose>
             </Link>
-            <Link
+            {/* <Link
               href={"/admin/coupons"}
               className={`hover:bg-gray-200 text-[13px] font-normal rounded-lg px-2 py-3 ${
                 path.includes("/admin/coupons") ? "bg-gray-200" : ""
@@ -126,7 +126,7 @@ const MobileSidebar = () => {
                 </span>
                 Coupons
               </SheetClose>
-            </Link>
+            </Link> */}
             <Link
               href={"/admin/admins"}
               className={`hover:bg-gray-200 text-[13px] font-normal rounded-lg px-2 py-3 ${

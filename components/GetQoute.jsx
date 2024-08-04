@@ -14,7 +14,7 @@ const GetQoute = () => {
         <div className="flex items-center flex-col lg:flex-row justify-between gap-7 py-20 overflow-hidden">
           <div class="absolute inset-0 bg-gradient-to-r from-darkGreen/85 to-darkGreen/85 lg:from-darkGreen/100 lg:to-darkGreen/0"></div>
           <div className="z-50 text-center lg:text-left">
-            <h1 className="text-white text-[32px] font-bold leading-[44px]">
+            <h1 className="text-white text-[32px] font-bold md:leading-[44px]">
               Start your journey <br /> to clean energy savings today
             </h1>
             {/* <span className="w-full lg:hidden flex items-center justify-center text-white text-center text-4xl mt-5">

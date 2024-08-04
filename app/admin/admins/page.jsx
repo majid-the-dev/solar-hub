@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
-import { LoaderIcon } from "react-hot-toast";
+import { LoaderIcon } from "lucide-react";
 import { formatDate } from "@/lib/utils";
 import { CgTrashEmpty } from "react-icons/cg";
 import {
