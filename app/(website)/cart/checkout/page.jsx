@@ -17,6 +17,8 @@ import { formatPrice } from "@/lib/utils";
 import { FaMinus, FaPlus } from "react-icons/fa";
 import { BiSolidTrash } from "react-icons/bi";
 import { FiTrash2 } from "react-icons/fi";
+import CheckoutDisclaimer from "@/components/CheckoutDisclaimer";
+import { states } from "@/public/data";
 
 const CheckoutPage = () => {
   const router = useRouter();
@@ -25,6 +27,8 @@ const CheckoutPage = () => {
     useContext(CartContext);
   const [quantities, setQuantities] = useState({});
   const [option, setOption] = useState("delivery");
+
+  const [deliveryFee, setDeliveryFee] = useState(0);
 
   const [fullName, setFullName] = useState("");
   const [userEmail, setUserEmail] = useState("");
@@ -56,6 +60,21 @@ const CheckoutPage = () => {
     setQuantities(initialQuantities);
   }, [cartProducts]);
 
+  useEffect(() => {
+    calculateDeliveryFee()
+  }, [
+    fullName,
+    phoneNumber,
+    userEmail,
+    streetAddress,
+    city,
+    state,
+    pickupSchedule,
+    pickupLocation,
+    option,
+    cartProducts
+  ]);
+
   const handleQuantityChange = (productId, action) => {
     setQuantities((prevQuantities) => {
       const newQuantities = { ...prevQuantities };
@@ -67,6 +86,38 @@ const CheckoutPage = () => {
       return newQuantities;
     });
   };
+
+  const calculateTotalPrice = () => {
+    return cartProducts.reduce((total, product) => {
+      const quantity = quantities[product._id] || 1;
+      const price = product.discount ? product.discount : product.price;
+      return total + price * quantity;
+    }, 0);
+  };
+
+  const calculateDeliveryFee = () => {
+    if (option === "pickup") {
+      setDeliveryFee(0);
+      return;
+    }
+
+    let fee = 0;
+    const stateData = states.find(
+      (s) => s.name.toLowerCase() === state.toLowerCase()
+    );
+
+    if (!stateData) {
+      setErrorMessage("Invalid state selected for delivery!");
+      return;
+    };
+
+    fee = stateData.delivery
+
+    setDeliveryFee(fee);
+  };
+
+  const totalPrice = calculateTotalPrice();
+  const grandTotal = totalPrice + deliveryFee;
 
   if (status === "loading") {
     return <LoadingScreen />;
@@ -201,6 +252,8 @@ const CheckoutPage = () => {
                     ))}
                   </div>
                 </div>
+
+                {/* Payment Summary */}
                 <div>
                   <h1 className="text-sm font-semibold mt-10 mb-6">
                     Payment Summary
@@ -209,21 +262,23 @@ const CheckoutPage = () => {
                     <div className="flex items-center justify-between">
                       <p className="text-gray-500 text-xs">Subtotal</p>
                       <p className="text-gray-500 text-sm font-semibold">
-                        &#8358;
+                        &#8358; {formatPrice(calculateTotalPrice())}
                       </p>
                     </div>
                     <div className="flex items-center justify-between">
                       <p className="text-gray-500 text-xs">Delivery</p>
                       <p className="text-gray-500 text-sm font-semibold">
-                        &#8358;
+                        &#8358; {formatPrice(deliveryFee)}
                       </p>
                     </div>
                     <div className="flex items-center justify-between">
                       <p className="text-sm font-semibold">Total</p>
-                      <p className="text-sm font-semibold">&#8358;</p>
+                      <p className="text-sm font-semibold">&#8358; {formatPrice(grandTotal)}</p>
                     </div>
                   </div>
                 </div>
+
+                <CheckoutDisclaimer />
               </div>
             </div>
           </div>
