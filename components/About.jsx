@@ -23,14 +23,16 @@ const About = () => {
       <div className="flex flex-col md:flex-row items-center gap-8 md:gap-10 mt-14">
         <div className="relative w-full max-w-sm h-72 bg-gray-400 rounded-3xl overflow-hidden">
           <Image
-            src={"/assets/sales.jpg"}
+            src={"/assets/solarhub-sales.jpeg"}
             alt="sales"
             layout="fill"
             objectFit="cover"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
           <div className="absolute bottom-7 left-6 right-7">
-            <h1 className="text-white text-lg md:text-2xl font-semibold">Sales</h1>
+            <h1 className="text-white text-lg md:text-2xl font-semibold">
+              Sales
+            </h1>
             <p className="text-gray-300 text-[13px] md:text-sm font-light leading-[18px] mt-1">
               We offer a wide range of solar products to meet your unique energy
               needs
@@ -46,14 +48,16 @@ const About = () => {
         </div>
         <div className="relative w-full max-w-sm h-72 bg-gray-400 rounded-3xl overflow-hidden">
           <Image
-            src={"/assets/installation.jpg"}
+            src={"/assets/solarhub-installation.jpg"}
             alt="sales"
             layout="fill"
             objectFit="cover"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
           <div className="absolute bottom-7 left-6 right-7">
-            <h1 className="text-white text-lg md:text-2xl font-semibold">Installation</h1>
+            <h1 className="text-white text-lg md:text-2xl font-semibold">
+              Installation
+            </h1>
             <p className="text-gray-300 text-[13px] md:text-sm font-light leading-[18px] mt-1">
               Our team of certified professionals ensures a seamless
               installation process
@@ -69,14 +73,16 @@ const About = () => {
         </div>
         <div className="relative w-full max-w-sm h-72 bg-gray-400 rounded-3xl overflow-hidden">
           <Image
-            src={"/assets/maintenance.jpg"}
+            src={"/assets/solarhub-engineer.jpg"}
             alt="sales"
             layout="fill"
             objectFit="cover"
           />
           <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent rounded-xl"></div>
           <div className="absolute bottom-7 left-6 right-7">
-            <h1 className="text-white text-lg md:text-2xl font-semibold">Maintenance</h1>
+            <h1 className="text-white text-lg md:text-2xl font-semibold">
+              Maintenance
+            </h1>
             <p className="text-gray-300 text-[13px] md:text-sm font-light leading-[18px] mt-1">
               Keep your solar running with our comprehensive maintenance
               services.

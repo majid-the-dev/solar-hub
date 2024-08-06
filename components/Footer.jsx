@@ -3,6 +3,8 @@ import Link from "next/link";
 import { RiInstagramFill } from "react-icons/ri";
 import { BsFacebook } from "react-icons/bs";
 import { AiFillTikTok } from "react-icons/ai";
+import { RiTwitterXFill } from "react-icons/ri";
+import { AiFillTwitterSquare } from "react-icons/ai";
 
 const Footer = () => {
 
@@ -59,6 +61,9 @@ const Footer = () => {
                     </Link>
                     <Link href={'https://www.tiktok.com/@solarhubng'} target="_blank" className="bg-white/10 rounded-lg p-2">
                         <AiFillTikTok className="text-[28px]" />
+                    </Link>
+                    <Link href={'https://www.tiktok.com/@solarhubng'} target="_blank" className="bg-white/10 rounded-lg p-2">
+                        <RiTwitterXFill className="text-[22px]" />
                     </Link>
                 </div>
             </div>
