@@ -62,7 +62,7 @@ const Footer = () => {
                     <Link href={'https://www.tiktok.com/@solarhubng'} target="_blank" className="bg-white/10 rounded-lg p-2">
                         <AiFillTikTok className="text-[28px]" />
                     </Link>
-                    <Link href={'https://www.tiktok.com/@solarhubng'} target="_blank" className="bg-white/10 rounded-lg p-2">
+                    <Link href={'https://x.com/SolarHubNG57942?t=nFWCRQAaOiJF5hGWlOxCfw&s=09'} target="_blank" className="bg-white/10 rounded-lg p-2">
                         <RiTwitterXFill className="text-[22px]" />
                     </Link>
                 </div>
