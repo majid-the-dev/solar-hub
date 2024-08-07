@@ -41,7 +41,7 @@ const Products = () => {
         <div className="col-span-1 w-full flex flex-col items-center gap-7">
           <div className="relative w-full max-w-sm h-52 rounded-3xl overflow-hidden p-6 group">
             <Image
-              src={"/assets/battery.png"}
+              src={"/assets/cworth-battery.webp"}
               alt="solar battery"
               layout="fill"
               objectFit="contain"
@@ -101,7 +101,7 @@ const Products = () => {
         <div className="col-span-1 w-full flex flex-col items-center gap-7">
           <div className="relative w-full max-w-sm h-52 rounded-3xl overflow-hidden p-6 group">
             <Image
-              src={"/assets/controller.png"}
+              src={"/assets/felicity-mptt.webp"}
               alt="solar panel"
               layout="fill"
               objectFit="contain"
