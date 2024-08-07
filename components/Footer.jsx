@@ -56,7 +56,7 @@ const Footer = () => {
                     <Link href={'https://www.instagram.com/solarhubng/'} target="_blank" className="bg-white/10 rounded-lg p-2">
                         <RiInstagramFill className="text-2xl" />
                     </Link>
-                    <Link href={'/'} className="bg-white/10 rounded-lg p-2.5">
+                    <Link href={'https://www.facebook.com/share/RwPtg3H7gVs3DJvR/?mibextid=LQQJ4d'} target="_blank" className="bg-white/10 rounded-lg p-2.5">
                         <BsFacebook className="text-[22px]" />
                     </Link>
                     <Link href={'https://www.tiktok.com/@solarhubng'} target="_blank" className="bg-white/10 rounded-lg p-2">
