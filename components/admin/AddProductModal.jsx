@@ -17,7 +17,7 @@ import {
   SelectValue,
 } from "@/components/ui/select";
 
-const NewProductModal = ({ onProductCreated }) => {
+const AddProductModal = ({ onProductCreated }) => {
   const [categories, setCategories] = useState([]);
   const [fetchCategories, setFetchCategories] = useState(false);
   const [modal, setModal] = useState(false);
@@ -222,27 +222,22 @@ const NewProductModal = ({ onProductCreated }) => {
                 <label className="text-xs text-gray-500">
                   Product Category
                 </label>
-                <Select
+                <select
                   name="category"
                   value={category}
-                  onValueChange={(value) => setCategory(value)}
+                  onChange={(e) => setCategory(e.target.value)}
+                  className="text-sm font-medium border border-input rounded-lg px-3 py-2 outline-none focus:border-default"
                 >
-                  <SelectTrigger className="text-sm font-medium">
-                    <SelectValue placeholder="Select product category" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    {fetchCategories && (
-                      <div className="flex items-center justify-center py-5">
-                        <Loader2 size={20} className="animate-spin" />
-                      </div>
-                    )}
-                    {categories?.map((category) => (
-                      <SelectItem key={category._id} value={category._id}>
-                        {category.name}
-                      </SelectItem>
-                    ))}
-                  </SelectContent>
-                </Select>
+                  <option value="">Select product category</option>
+                  {fetchCategories && (
+                    <option disabled>Loading...</option>
+                  )}
+                  {categories?.map((category) => (
+                    <option key={category._id} value={category._id}>
+                      {category.name}
+                    </option>
+                  ))}
+                </select>
               </div>
 
               {/* Product Condition */}
@@ -250,19 +245,16 @@ const NewProductModal = ({ onProductCreated }) => {
                 <label className="text-xs text-gray-500">
                   Product Condition
                 </label>
-                <Select
+                <select
                   name="condition"
                   value={condition}
-                  onValueChange={(value) => setCondition(value)}
+                  onChange={(e) => setCondition(e.target.value)}
+                  className="text-sm font-medium border border-input rounded-lg px-3 py-2 outline-none focus:border-default"
                 >
-                  <SelectTrigger className="text-sm font-medium">
-                    <SelectValue placeholder="Select product condition" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="Brand New">Brand New</SelectItem>
-                    <SelectItem value="Pre Owned">Pre Owned</SelectItem>
-                  </SelectContent>
-                </Select>
+                  <option value="">Select product condition</option>
+                  <option value="Brand New">Brand New</option>
+                  <option value="Pre Owned">Pre Owned</option>
+                </select>
               </div>
 
               {/* Product Description */}
@@ -314,25 +306,32 @@ const NewProductModal = ({ onProductCreated }) => {
                 <label className="text-xs text-gray-500">
                   Product Availability{" "}
                 </label>
-                <Select
+                <select
                   name="availability"
                   value={availability}
-                  onValueChange={(value) => setAvailability(value)}
+                  onChange={(e) => setAvailability(e.target.value)}
+                  className="text-sm font-medium border border-input rounded-lg px-3 py-2 outline-none focus:border-default"
                 >
-                  <SelectTrigger className="text-sm font-medium">
-                    <SelectValue placeholder="Select product availability" />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="Available">Available</SelectItem>
-                    <SelectItem value="Out of Stock">Out of Stock</SelectItem>
-                  </SelectContent>
-                </Select>
+                  <option value="">Select product availability</option>
+                  <option value="Available">Available</option>
+                  <option value="Out of Stock">Out of Stock</option>
+                </select>
               </div>
 
               {/* Free Delivery */}
               <div className="flex flex-col gap-3">
                 <label className="text-xs text-gray-500">Free Delivery </label>
-                <Select
+                <select
+                  name="freeDelivery"
+                  value={freeDelivery}
+                  onChange={(e) => setFreeDelivery(e.target.value)}
+                  className="text-sm font-medium border border-input rounded-lg px-3 py-2 outline-none focus:border-default"
+                >
+                  <option value="">Select delivery option</option>
+                  <option value="Yes">Yes</option>
+                  <option value="No">No</option>
+                </select>
+                {/* <Select
                   name="freeDelivery"
                   value={freeDelivery}
                   onValueChange={(value) => setFreeDelivery(value)}
@@ -344,7 +343,7 @@ const NewProductModal = ({ onProductCreated }) => {
                     <SelectItem value="Yes">Yes</SelectItem>
                     <SelectItem value="No">No</SelectItem>
                   </SelectContent>
-                </Select>
+                </Select> */}
               </div>
 
               {/* Product Properties */}
@@ -485,4 +484,4 @@ const NewProductModal = ({ onProductCreated }) => {
   );
 };
 
-export default NewProductModal;
+export default AddProductModal;

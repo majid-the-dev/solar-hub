@@ -17,6 +17,7 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import ProductActionDropdown from "@/components/admin/ProductActionDropdown";
+import AddProductModal from "@/components/admin/AddProductModal";
 
 const Page = () => {
   const [loading, setLoading] = useState(true);
@@ -89,7 +90,8 @@ const Page = () => {
           </p>
         </div>
         <div>
-          <NewProductModal onProductCreated={handleProductCreated} />
+          {/* <NewProductModal onProductCreated={handleProductCreated} /> */}
+          <AddProductModal onProductCreated={handleProductCreated} />
         </div>
       </div>
 
