@@ -62,7 +62,7 @@ const Products = () => {
           <div className="relative w-full max-w-sm h-52 rounded-3xl overflow-hidden p-6 group">
             <Image
               src={"/assets/stb-inverter.jpg"}
-              alt="solar panel"
+              alt="solar inverters"
               layout="fill"
               objectFit="contain"
             />
@@ -82,7 +82,7 @@ const Products = () => {
           <div className="relative w-full max-w-sm h-52 rounded-3xl overflow-hidden p-6 group">
             <Image
               src={"/assets/generator.png"}
-              alt="solar inverters"
+              alt="solar panel"
               layout="fill"
               objectFit="contain"
             />
