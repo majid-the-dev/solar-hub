@@ -17,6 +17,7 @@ import { formatPrice } from "@/lib/utils";
 import { CartContext } from "@/utils/AppContext";
 import Image from "next/image";
 import GetQoute from "@/components/GetQoute";
+import Link from "next/link";
 
 const page = () => {
   const { id } = useParams();
@@ -107,7 +108,7 @@ const page = () => {
             <h1 className="text-lg md:text-2xl font-normal max-w-md leading-[29px] md:leading-[35px] mt-5">
               {product?.title}
             </h1>
-            {product.discount ? (
+            {/* {product.discount ? (
               <div>
                 <div className="flex items-center gap-4">
                   <p className="text-red-600 text-lg font-light mt-5">
@@ -127,22 +128,22 @@ const page = () => {
               <p className="text-red-600 text-lg font-light mt-5">
                 &#8358; {formatPrice(product?.price)}
               </p>
-            )}
+            )} */}
             <div className="mt-5">
-              <button
-                disabled={product.availability !== "Available"}
-                onClick={() => {
-                  addToCart(product);
-                  toast.success("Added to cart!");
-                }}
+              <Link target="_blank" href={"https://wa.me/+2347071793075/"}
+                // disabled={product.availability !== "Available"}
+                // onClick={() => {
+                //   addToCart(product);
+                //   toast.success("Added to cart!");
+                // }}
                 className="bg-darkGreen text-white text-sm font-medium px-5 py-3 hover:bg-darkGreen/80 disabled:bg-darkGreen/80 disabled:cursor-not-allowed animation"
               >
                 {product.availability === "Available" ? (
-                  <span>Add To Cart</span>
+                  <span>Make Enquiries</span>
                 ) : (
                   <span>Out of Stock</span>
                 )}
-              </button>
+              </Link>
             </div>
             <p className="text-xs font-light mt-5">
               * Same day delivery available in Lagos and FCT

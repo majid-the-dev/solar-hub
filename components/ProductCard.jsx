@@ -33,10 +33,10 @@ const ProductCard = ({ product, link }) => {
           {product?.brand}
         </p>
         {/* Title */}
-        <h1 className="text-center text-[15px] font-normal line-clamp-2 mt-4 group-hover:underline underline-offset-2">
+        <h1 className="text-center text-[14px] font-medium line-clamp-2 mt-4">
           {product?.title}
         </h1>
-        {product?.discount ? (
+        {/* {product?.discount ? (
           <div className="flex flex-col md:flex-row items-center gap-1 mt-3">
             <p className="text-center text-red-600 text-sm font-normal whitespace-nowrap">
               &#8358; {formatPrice(product?.discount)}
@@ -49,7 +49,7 @@ const ProductCard = ({ product, link }) => {
           <p className="text-center text-red-600 text-sm font-normal mt-3">
             &#8358; {formatPrice(product?.price)}
           </p>
-        )}
+        )} */}
         {/* Availability */}
         {product?.availability !== "Available" && (
           <p className="text-red-600 text-sm font-light mt-2">Out of Stock</p>
