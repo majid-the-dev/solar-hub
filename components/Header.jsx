@@ -16,7 +16,7 @@ const Header = () => {
       <div className="bg-gray-100">
         <div className="mx-auto w-full max-w-7xl flex items-center justify-between gap-4 px-5 py-4">
           <p className="text-xs font-light whitespace-nowrap">
-            Need more info? Call 07071793075
+            Need more info? Call 08182012345
           </p>
           <div className="hidden md:flex items-center gap-4">
             <Link
