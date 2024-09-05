@@ -130,7 +130,7 @@ const page = () => {
               </p>
             )} */}
             <div className="mt-5">
-              <Link target="_blank" href={"https://wa.me/+2347071793075/"}
+              <Link target="_blank" href={"https://wa.me/+2348182012345/"}
                 // disabled={product.availability !== "Available"}
                 // onClick={() => {
                 //   addToCart(product);
