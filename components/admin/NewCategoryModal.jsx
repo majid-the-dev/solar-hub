@@ -13,13 +13,7 @@ import {
   FormLabel,
   FormMessage,
 } from "@/components/ui/form";
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
+me
 import { Input } from "@/components/ui/input";
 import toast from "react-hot-toast";
 import { useRouter } from "next/navigation";
@@ -77,9 +71,7 @@ const NewCategoryModal = ({ onCategoryCreated, parentCategories }) => {
           name: values.name,
           parent: values.parent || null, // Ensure parent is null if not selected
         }),
-        headers: {
-          "Content-Type": "application/json",
-        },
+        to
       });
 
       if (response.ok) {

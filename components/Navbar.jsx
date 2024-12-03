@@ -154,7 +154,7 @@ const Navbar = () => {
             <HiShoppingCart />
           </Link>
           <Link
-            target="_blank" href={"https://wa.me/+2347071793075/"}
+            target="_blank" href={"https://wa.me/+2348182012345/"}
             className="animation hidden md:block text-xs bg-darkGreen text-white font-semibold whitespace-nowrap rounded-full px-6 py-3 hover:bg-darkGreen/80"
           >
             Get Quote

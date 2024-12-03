@@ -27,7 +27,7 @@ const GetQoute = () => {
               you every step of the way.
             </p>
             <div className="mt-6">
-            <Link target="_blank" href={"https://wa.me/+2347071793075/"} className="inline-flex items-center justify-center lg:justify-start bg-white text-darkGreen text-sm font-semibold whitespace-nowrap rounded-full px-6 py-3">
+            <Link target="_blank" href={"https://wa.me/+2348182012345/"} className="inline-flex items-center justify-center lg:justify-start bg-white text-darkGreen text-sm font-semibold whitespace-nowrap rounded-full px-6 py-3">
               Get Quote
             </Link>
             </div>

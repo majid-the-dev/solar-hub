@@ -34,7 +34,7 @@ const Hero = () => {
       </p>
       <div className="inline-flex items-center gap-4 z-50 mt-8">
         <Link
-          target="_blank" href={"https://wa.me/+2347071793075/"}
+          target="_blank" href={"https://wa.me/+2348182012345/"}
           className="bg-white flex items-center gap-2 text-darkGreen text-sm md:text-[15px] font-semibold rounded-full px-8 py-4"
         >
           Get Quote Today
