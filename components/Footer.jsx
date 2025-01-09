@@ -73,7 +73,7 @@ const Footer = () => {
 
       <div className="mx-auto mt-12 pb-10">
         <p className="text-xs font-normal text-center leading-8">
-          &copy; {date.getFullYear()} Harmony Group NG. All rights reserved
+          &copy; 2025 Harmony Group NG. All rights reserved
         </p>
       </div>
     </footer>
